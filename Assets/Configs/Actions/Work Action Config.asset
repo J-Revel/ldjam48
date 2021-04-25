@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c894fda7c2bae424fa310a7e4147a2c8, type: 3}
+  m_Name: Work Action Config
+  m_EditorClassIdentifier: 
+  text: You will soon be late for work !
+  duration: 120
+  slots:
+  - {fileID: 11400000, guid: 25648856c9556434da77eb8485fc3803, type: 2}
+  nextActionSuccess:
+    probability: 0.5
+    probabilityOffset: 0
+    possibleActions:
+    - action: {fileID: 11400000, guid: 964ca666e9dfbd24981d30ccc6368e02, type: 2}
+      weight: 1
+  nextActionFailure:
+    probability: 0
+    probabilityOffset: 0
+    possibleActions: []
+  successGift: {fileID: 11400000, guid: 3b7cd07e6dd7fbb42b4927721aa80b06, type: 2}
+  failureGift: {fileID: 0}
