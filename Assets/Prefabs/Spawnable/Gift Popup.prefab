@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 269.1, y: 51.189}
+  m_SizeDelta: {x: 368.57, y: 67.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5118518468457620561
 CanvasRenderer:
@@ -72,7 +72,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -237,7 +237,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 297, y: 127.8117}
+  m_SizeDelta: {x: 365.4, y: 127.8117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5118518469026402385
 CanvasRenderer:
@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -371.04996, y: -53.905857}
+  m_AnchoredPosition: {x: 0, y: -53.905857}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5118518469433643497
@@ -405,8 +405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 437.2, y: -311.8}
-  m_SizeDelta: {x: 297, y: 0}
+  m_AnchoredPosition: {x: 500, y: -311.8}
+  m_SizeDelta: {x: 400, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5118518469783456672
 CanvasRenderer:
@@ -535,6 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6491219138573596679, guid: 894deaee055c8ad4e9169eaa69162a2b, type: 3}
   cardContainer: {fileID: 5118518469433643500}
+  text: {fileID: 5118518468457620562}
 --- !u!114 &-7491854712215656826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,4 +548,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1022d3cdc4acae9488bc220e5acdf256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 0}
+  giftConfig: {fileID: 0}

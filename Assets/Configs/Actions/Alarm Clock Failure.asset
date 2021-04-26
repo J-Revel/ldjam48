@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b9ebe4d529c1143b5dcb60b261eb5c, type: 3}
+  m_Name: Alarm Clock Failure
+  m_EditorClassIdentifier: 
+  description: You close your eyes for a second... And suddenly, half an hour passed
+    ! You are now late for work ! You can only hope it won't be noticed...
+  cards:
+  - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
+  actions:
+  - probability: 0.5
+    probabilityOffset: 0
+    possibleActions:
+    - action: {fileID: 11400000, guid: 973330e563e6a8c4885cc5c63aea2fb0, type: 2}
+      weight: 1

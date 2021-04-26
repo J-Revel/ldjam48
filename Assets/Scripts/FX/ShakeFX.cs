@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShakeFX : MonoBehaviour
 {
     public float value;
     public float maxShake;
-    
+
     // Update is called once per frame
     void Update()
     {

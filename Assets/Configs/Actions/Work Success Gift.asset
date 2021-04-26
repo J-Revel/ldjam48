@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b9ebe4d529c1143b5dcb60b261eb5c, type: 3}
   m_Name: Work Success Gift
   m_EditorClassIdentifier: 
-  description: 
+  description: You are so motivated that you managed to arrive early ! The working
+    day could not start better.
   cards:
   - {fileID: 11400000, guid: 86c3151d49379bc45812b92f30705582, type: 2}
-  - {fileID: 11400000, guid: 4a32123021591604cac38b9435f963f1, type: 2}
+  - {fileID: 11400000, guid: 76d6a265094078740ac62c58b41f982a, type: 2}
+  - {fileID: 11400000, guid: b228bb7d081b8e141bf94cf751b9d8ef, type: 2}
   actions:
   - probability: 0.5
     probabilityOffset: 0

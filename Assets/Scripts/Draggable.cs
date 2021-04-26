@@ -19,12 +19,13 @@ public struct DragReleaseResult
 
 public class Draggable : EventTrigger
 {
-    private Image image;
     private RectTransform rectTransform;
     public static System.Action<Draggable> dragStartDelegate;
 
     public delegate DragReleaseResult DragReleaseDelegate(Draggable draggable);
     public static DragReleaseDelegate dragReleaseDelegate;
+
+    public System.Action<bool> dragChangeDelegate;
 
     public Vector3 dragStartPos;
     public Transform dragStartParent;
@@ -34,7 +35,6 @@ public class Draggable : EventTrigger
 
     private void Start()
     {
-        image = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
         if(defaultParent == null)
             defaultParent = transform.parent;
@@ -56,18 +56,19 @@ public class Draggable : EventTrigger
 
     public override void OnBeginDrag(PointerEventData data)
     {
-        image.raycastTarget = false;
         dragStartPos = transform.position;
         dragStartParent = transform.parent;
         transform.SetParent(GameState.instance.draggedObjectParent, true);
         transform.SetAsLastSibling();
         dragStartDelegate?.Invoke(this);
         GameState.instance.backgroundClicked?.Invoke();
+        dragChangeDelegate?.Invoke(true);
     }
 
     public override void OnEndDrag(PointerEventData data)
     {
         base.OnEndDrag(data);
+        dragChangeDelegate?.Invoke(false);
         
         if(dragReleaseDelegate != null)
         {
@@ -95,7 +96,6 @@ public class Draggable : EventTrigger
             Slot parentSlot = dragStartParent.GetComponent<Slot>();
             if(parentSlot != null)
                 parentSlot.OnCardReleased();
-            image.raycastTarget = true;
         }
     }
 }

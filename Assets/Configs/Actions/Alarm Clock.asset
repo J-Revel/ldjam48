@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c894fda7c2bae424fa310a7e4147a2c8, type: 3}
+  m_Name: Alarm Clock
+  m_EditorClassIdentifier: 
+  text: BEEEP BEEEEP ! The alarm clock is ringing. You should wake up now. Provide
+    motivation to get up !
+  duration: 0
+  slots:
+  - {fileID: 11400000, guid: 3c08fd687527d33458b40c95aa226a5b, type: 2}
+  nextActionSuccess:
+    probability: 1
+    probabilityOffset: 0
+    possibleActions:
+    - action: {fileID: 11400000, guid: 54163fc0e983bb24ca08ece760b0ae98, type: 2}
+      weight: 1
+  nextActionFailure:
+    probability: 1
+    probabilityOffset: 0
+    possibleActions: []
+  successGift: {fileID: 0}
+  failureGift: {fileID: 0}

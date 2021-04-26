@@ -15,6 +15,7 @@ public class GameState : MonoBehaviour
     public GiftPopup giftPopupPrefab;
     public ActionPopupSpawner actionCardPack;
     public GiftPopupSpawner giftCardPack;
+    public Transform darkProjectilePrefab;
 
     public enum SpawnableVersion
     {
@@ -42,18 +43,18 @@ public class GameState : MonoBehaviour
         Instantiate(cardPrefab, position, Quaternion.identity, cardContainer).GetComponent<CardDisplay>().card = card;
     }
 
-    public void SpawnGiftElement(Vector3 position, GiftConfig config, SpawnableVersion version)
+    public void SpawnGiftElement(Vector3 position, ScenarioActionGiftConfig config, SpawnableVersion version)
     {
         foreach(SpawnablePrefabs prefab in this.giftPrefabs)
         {
             if(prefab.version == version)
             {
-                Instantiate(prefab.prefab, position, Quaternion.identity, cardContainer).GetComponent<GiftConfigSpawnable>().config = config;
+                Instantiate(prefab.prefab, position, Quaternion.identity, cardContainer).GetComponent<GiftConfigSpawnable>().giftConfig = config;
             }
         }
     }
 
-    public Transform SpawnActionElement(Vector3 position, ActionConfig config, SpawnableVersion version)
+    public Transform SpawnActionElement(Vector3 position, ScenarioNode config, SpawnableVersion version)
     {
         Transform result = null;
         foreach(SpawnablePrefabs prefab in this.actionPrefabs)
@@ -61,10 +62,15 @@ public class GameState : MonoBehaviour
             if(prefab.version == version)
             {
                 result = Instantiate(prefab.prefab, position, Quaternion.identity, cardContainer);
-                result.GetComponent<ActionConfigSpawnable>().config = config;
+                result.GetComponent<ActionConfigSpawnable>().scenarioNode = config;
             }
         }
         return result;
+    }
+
+    public void SpawnDarkProjectile(Vector3 position)
+    {
+        Instantiate(darkProjectilePrefab, position, Quaternion.identity, GameState.instance.cardContainer);
     }
 
     void Awake()

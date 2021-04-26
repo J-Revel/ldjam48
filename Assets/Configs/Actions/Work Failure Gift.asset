@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b9ebe4d529c1143b5dcb60b261eb5c, type: 3}
+  m_Name: Work Failure Gift
+  m_EditorClassIdentifier: 
+  description: 'Finally you don''t feel like going to work. It does not look like
+    you, but you call in sick. '
+  cards:
+  - {fileID: 11400000, guid: 9e5db191b0085334a9470ed7a87cf487, type: 2}
+  actions:
+  - probability: 1
+    probabilityOffset: 0
+    possibleActions:
+    - action: {fileID: 0}
+      weight: 0

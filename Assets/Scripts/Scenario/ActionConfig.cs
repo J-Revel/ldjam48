@@ -12,5 +12,4 @@ public class ActionConfig : ScriptableObject
     public ActionConfigPool nextActionFailure;
     public GiftConfig successGift;
     public GiftConfig failureGift;
-
 }

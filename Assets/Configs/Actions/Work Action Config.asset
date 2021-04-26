@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c894fda7c2bae424fa310a7e4147a2c8, type: 3}
   m_Name: Work Action Config
   m_EditorClassIdentifier: 
-  text: You will soon be late for work !
+  text: 'You take your breakfast, now it is time to go to work ! '
   duration: 120
   slots:
   - {fileID: 11400000, guid: 25648856c9556434da77eb8485fc3803, type: 2}
@@ -25,6 +25,8 @@ MonoBehaviour:
   nextActionFailure:
     probability: 0
     probabilityOffset: 0
-    possibleActions: []
+    possibleActions:
+    - action: {fileID: 0}
+      weight: 0
   successGift: {fileID: 11400000, guid: 3b7cd07e6dd7fbb42b4927721aa80b06, type: 2}
-  failureGift: {fileID: 0}
+  failureGift: {fileID: 11400000, guid: b4374a9aee5c21a49b5624bff943585e, type: 2}

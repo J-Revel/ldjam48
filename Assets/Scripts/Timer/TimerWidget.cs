@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimerWidget : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     public Image radialImg;
     public float value;
     public float startValue = 60;

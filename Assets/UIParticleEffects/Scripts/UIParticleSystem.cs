@@ -91,13 +91,13 @@ public class UIParticleSystem : MonoBehaviour {
     protected int ParticlePoolPointer;
     public List<Transform> emitters = new List<Transform>();
 
+    public static UIParticleSystem instance;
 
-	// Use this for initialization
-	void Start () {    
-    }
+
 
     void Awake()
     {
+        instance = this;
         if (ParticlePool == null)
             Init();
         if (PlayOnAwake)
@@ -107,7 +107,7 @@ public class UIParticleSystem : MonoBehaviour {
     private void Init()
     {
         ParticlePoolPointer = 0;
-        ParticlePool = new Image[(int)(Lifetime * EmissionsPerSecond * 1.1f + 1)];
+        ParticlePool = new Image[(int)(Lifetime * EmissionsPerSecond * 1.1f + 1) * 10];
         for (int i = 0; i < ParticlePool.Length; i++)
         {
 
@@ -146,7 +146,7 @@ public class UIParticleSystem : MonoBehaviour {
                 foreach(Transform emitter in emitters)
                 {
                     ParticlePoolPointer = (ParticlePoolPointer + 1) % ParticlePool.Length;
-                    if(!ParticlePool[ParticlePool.Length - 1 - ParticlePoolPointer].gameObject.activeSelf)
+                    if(emitter != null && !ParticlePool[ParticlePool.Length - 1 - ParticlePoolPointer].gameObject.activeSelf)
                         StartCoroutine(CoParticleFly(ParticlePool[ParticlePool.Length - 1 - ParticlePoolPointer], emitter.position));
                 }
             }

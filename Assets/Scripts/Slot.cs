@@ -10,15 +10,17 @@ public class Slot : MonoBehaviour
 
     public HoverColor hoverOverlay;
     public HoverColor hilightOverlay;
+    public HoverColor[] lockOverlays;
 
     private bool hovered = false;
     public Color defaultHoverColor;
     public Color invalidHoverColor;
     public Color validHoverColor;
     public Draggable content;
-    public SlotConfig config;
+    public ScenarioActionSlotConfig config;
     public System.Action<Slot> slotFilledDelegate;
     public System.Action<Slot> slotEmptiedDelegate;
+    public bool isLocked;
 
     public void Start()
     {
@@ -84,26 +86,16 @@ public class Slot : MonoBehaviour
     
     public bool DoesAcceptDraggable(Draggable draggable)
     {
+        if(isLocked)
+            return false;
         CardElement cardElement = draggable.GetComponent<CardElement>();
         if(cardElement == null) return false;
         Card card = cardElement.card;
-        if(config.acceptedCards == null && config.acceptedCategories == null)
+        if(card == null)
         {
-            return true;
+            return false;
         }
-        if(config.acceptedCards != null)
-        foreach(Card acceptedCard in config.acceptedCards)
-        {
-            if(acceptedCard == card)
-                return true;
-        }
-        if(config.acceptedCategories != null)
-        foreach(CardCategory category in config.acceptedCategories)
-        {
-            if(card.category == category)
-                return true;
-        }
-        return false;
+        return config.DoesAcceptCard(card);
     }
 
     public void SuckCard(Draggable draggable)
@@ -135,5 +127,14 @@ public class Slot : MonoBehaviour
     public void OnCardReleased()
     {
         content = null;
+    }
+
+    public void Lock()
+    {
+        isLocked = true;
+        foreach(HoverColor hoverColor in lockOverlays)
+        {
+            hoverColor.OnHoverStart();
+        }
     }
 }

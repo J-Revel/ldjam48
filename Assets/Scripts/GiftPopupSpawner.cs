@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GiftPopupSpawner : MonoBehaviour
 {
-    public GiftConfig config { get { return GetComponent<GiftConfigSpawnable>().config; } }
+    public ScenarioActionGiftConfig config { get { return GetComponent<GiftConfigSpawnable>().giftConfig; } }
     public Transform spawnPosition;
 
     void SpawnPrefab()

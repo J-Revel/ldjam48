@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ActionPopup : MonoBehaviour
 {
-    public ActionConfig config { get { return GetComponent<ActionConfigSpawnable>().config; }}
+    public ScenarioNode scenarioNode { get { return GetComponent<ActionConfigSpawnable>().scenarioNode; }}
     
     public Text description;
     public Slot slotPrefab;
@@ -18,29 +18,32 @@ public class ActionPopup : MonoBehaviour
     public void Start()
     {
         animator = GetComponent<Animator>();
-        foreach(SlotConfig slotConfig in config.slots)
+        foreach(ScenarioActionSlotConfig slotConfig in scenarioNode.GetSlotConfigs())
         {
             Slot slot = Instantiate(slotPrefab, slotContainer);
             slot.config = slotConfig;
             spawnedSlots.Add(slot);
             slot.slotFilledDelegate += OnSlotFilled;
         }
-        description.text = config.text;
-        if(config.duration > 0)
+        description.text = scenarioNode.description;
+        if(timer != null)
         {
-            timer.startValue = config.duration;
-            timer.timerEndDelegate += OnTimerEnd;
-        }
-        else
-        {
-            timer.gameObject.SetActive(false);
+            if(scenarioNode.duration > 0)
+            {
+                timer.startValue = scenarioNode.duration;
+                timer.timerEndDelegate += OnTimerEnd;
+            }
+            else
+            {
+                timer.gameObject.SetActive(false);
+            }
         }
     }
 
-    private bool allSlotsFilled { get { 
+    public bool allSlotsFilled { get { 
         foreach(Slot childSlot in spawnedSlots)
         {
-            if(childSlot.content == null)
+            if(childSlot.content == null && childSlot.config.required)
             {
                 return false;
             }
@@ -50,13 +53,23 @@ public class ActionPopup : MonoBehaviour
 
     private void OnSlotFilled(Slot slot)
     {
-        if(allSlotsFilled)
-            animator.SetTrigger("Close");
+        
     }
 
     public void OnCloseAnimFinished()
     {
-        float probabilityVal = Random.Range(0, 1.0f);
+        List<Card> cards = new List<Card>();
+        foreach(Slot childSlot in spawnedSlots)
+        {
+            Card card = null;
+            if(childSlot.content != null)
+            {
+                card = childSlot.content.GetComponent<CardElement>().card;
+            }
+            cards.Add(card);
+        }
+        GetComponent<ActionConfigSpawnable>().scenarioNode.OnNodeClosed(transform.position, cards, allSlotsFilled);
+        /*float probabilityVal = Random.Range(0, 1.0f);
         if(allSlotsFilled)
         {
             if(config.nextActionSuccess.IsInProbabilityRange(probabilityVal))
@@ -80,11 +93,16 @@ public class ActionPopup : MonoBehaviour
             {
                 GameState.instance.SpawnGiftElement(transform.position, config.failureGift, GameState.SpawnableVersion.Pack);
             }
-        }
+        }*/
         Destroy(gameObject);
     }
 
     public void OnTimerEnd()
+    {
+        animator.SetTrigger("Close");
+    }
+
+    public void ActionValidated()
     {
         animator.SetTrigger("Close");
     }

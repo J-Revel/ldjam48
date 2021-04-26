@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ActionConfigSpawnable : MonoBehaviour
 {
-    public ActionConfig config;
+    public ScenarioNode scenarioNode;
 }
