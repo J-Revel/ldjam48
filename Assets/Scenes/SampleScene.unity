@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1044,7 +1044,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 126623106}
-  - component: {fileID: 126623109}
   - component: {fileID: 126623108}
   - component: {fileID: 126623107}
   - component: {fileID: 126623110}
@@ -1095,19 +1094,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkSuccess: 1
---- !u!114 &126623109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126623105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5f4c6f91abf0e4283807ba99df5418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkedCard: {fileID: 11400000, guid: 76d6a265094078740ac62c58b41f982a, type: 2}
 --- !u!114 &126623110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,82 +1112,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
   - {fileID: 11400000, guid: 93cf28806b9189646841209d281976ac, type: 2}
   nodes: []
---- !u!1 &130286927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130286928}
-  - component: {fileID: 130286929}
-  - component: {fileID: 130286930}
-  - component: {fileID: 130286931}
-  m_Layer: 0
-  m_Name: Goto sleep
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &130286928
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130286927}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1291144184}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &130286929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130286927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04e1fdbd22a3a2d42b4816d4f161e459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkSuccess: 0
---- !u!114 &130286930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130286927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 015f25a504db06a4caea72a4ea1bbfa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  node: {fileID: 1447316247}
-  version: 1
---- !u!114 &130286931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130286927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b2d7b4610962ee439479296bf6bb500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variable: {fileID: 1982306690}
-  value: 3
-  targets:
-  - {fileID: 1752016866}
 --- !u!1 &143846298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,6 +3354,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &673296552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673296553}
+  - component: {fileID: 673296554}
+  m_Layer: 0
+  m_Name: Day Count
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673296553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673296552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1230066936}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673296554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673296552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a897ea217b883024fa4391ef30139cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &680348043
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,6 +5621,131 @@ MonoBehaviour:
   value: 3
   targets:
   - {fileID: 2056454501}
+--- !u!1 &1151991912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151991913}
+  - component: {fileID: 1151991918}
+  - component: {fileID: 1151991916}
+  - component: {fileID: 1151991915}
+  - component: {fileID: 1151991914}
+  - component: {fileID: 1151991920}
+  - component: {fileID: 1151991919}
+  m_Layer: 0
+  m_Name: Goto sleep Nightmares
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151991913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1291144184}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151991914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7535a3e90c5c84c88b159f82fdbb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 673296554}
+  toAdd: 0
+--- !u!114 &1151991915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031407fb2d212b645b706647967b96fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 673296554}
+  expectedValue: 1
+--- !u!114 &1151991916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2d7b4610962ee439479296bf6bb500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 1982306690}
+  value: 3
+  targets:
+  - {fileID: 1752016866}
+--- !u!114 &1151991918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1fdbd22a3a2d42b4816d4f161e459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkSuccess: 1
+--- !u!114 &1151991919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7519f1ac45e1a1f49b5a85b695b6ca73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!114 &1151991920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151991912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a454cfe12d4cb994da6fca6fec05f316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: You wake up in sweat, with a strange impression. You had a nightmare
+    that felt too real. It took you a long time to calm down, but you finally manage
+    to fall asleep.
+  cards:
+  - {fileID: 11400000, guid: 2eacdb286604b8b46829d155b529658c, type: 2}
+  nodes:
+  - {fileID: 1447316247}
 --- !u!1 &1195580148
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,6 +5985,7 @@ Transform:
   - {fileID: 1530127007}
   - {fileID: 1231152103}
   - {fileID: 1982306689}
+  - {fileID: 673296553}
   m_Father: {fileID: 1390821924}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6238,7 +6318,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 130286928}
+  - {fileID: 1151991913}
   - {fileID: 2035186453}
   m_Father: {fileID: 211005660}
   m_RootOrder: 1
@@ -6799,7 +6879,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1408106225}
-  - component: {fileID: 1408106230}
   - component: {fileID: 1408106229}
   - component: {fileID: 1408106228}
   - component: {fileID: 1408106227}
@@ -6885,19 +6964,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkSuccess: 1
---- !u!114 &1408106230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408106224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5f4c6f91abf0e4283807ba99df5418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkedCard: {fileID: 11400000, guid: 76d6a265094078740ac62c58b41f982a, type: 2}
 --- !u!114 &1408106231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9771,6 +9837,7 @@ GameObject:
   - component: {fileID: 2035186455}
   - component: {fileID: 2035186454}
   - component: {fileID: 2035186456}
+  - component: {fileID: 2035186457}
   m_Layer: 0
   m_Name: Goto sleep
   m_TagString: Untagged
@@ -9835,6 +9902,20 @@ MonoBehaviour:
   value: 3
   targets:
   - {fileID: 1752016866}
+--- !u!114 &2035186457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035186452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7535a3e90c5c84c88b159f82fdbb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 673296554}
+  toAdd: 1
 --- !u!1 &2038073444
 GameObject:
   m_ObjectHideFlags: 0
