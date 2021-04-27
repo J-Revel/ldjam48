@@ -23,8 +23,7 @@ public class DarkProjectile : MonoBehaviour
     {
         if(target != null && target.content != null)
             target = null;
-        if(target == null)
-        {
+        
             float closestDistance = Mathf.Infinity;
             for(int i=0; i<Slot.activeSlots.Count; i++)
             {
@@ -36,7 +35,6 @@ public class DarkProjectile : MonoBehaviour
                     break;
                 }
             }
-        }
         if(target != null)
         {
             float distance = (target.transform.position - transform.position).sqrMagnitude;
@@ -50,8 +48,6 @@ public class DarkProjectile : MonoBehaviour
         }
         else
         {
-            if(speed > 0)
-                speed -= Time.deltaTime * acceleration;
         }
     }
 }

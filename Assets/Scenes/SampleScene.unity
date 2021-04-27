@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -613,6 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &64156022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,7 +1219,7 @@ Transform:
   - {fileID: 100616105}
   - {fileID: 1943398978}
   m_Father: {fileID: 492221572}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &160639921
 MonoBehaviour:
@@ -1375,7 +1376,7 @@ Transform:
   - {fileID: 1743471179}
   - {fileID: 1291144184}
   m_Father: {fileID: 492221572}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &211005661
 MonoBehaviour:
@@ -1391,6 +1392,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: It is now time to go to sleep. Tomorrow is another working day !
   duration: 0
+--- !u!1 &230684873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230684874}
+  m_Layer: 0
+  m_Name: Results
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &230684874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230684873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1655761844}
+  m_Father: {fileID: 1123416555}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236563906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,6 +1917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &281587841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,6 +2312,7 @@ Transform:
   m_Children:
   - {fileID: 2047828258}
   - {fileID: 1992764311}
+  - {fileID: 565584368}
   - {fileID: 1007214072}
   m_Father: {fileID: 1447316246}
   m_RootOrder: 1
@@ -2376,6 +2410,7 @@ Transform:
   - {fileID: 281149308}
   - {fileID: 33399553}
   - {fileID: 2056454500}
+  - {fileID: 1123416555}
   - {fileID: 160639920}
   - {fileID: 1195580149}
   - {fileID: 211005660}
@@ -2624,6 +2659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &528921227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2836,6 +2872,114 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1982306690}
   toAdd: 1
+--- !u!1 &565584367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565584368}
+  - component: {fileID: 565584374}
+  - component: {fileID: 565584373}
+  - component: {fileID: 565584372}
+  - component: {fileID: 565584371}
+  - component: {fileID: 565584369}
+  m_Layer: 0
+  m_Name: Failure Fired
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565584368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 430240837}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565584369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031407fb2d212b645b706647967b96fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 1982306690}
+  expectedValue: 1
+  comparison: 3
+--- !u!114 &565584371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7535a3e90c5c84c88b159f82fdbb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 1982306690}
+  toAdd: 2
+--- !u!114 &565584372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a454cfe12d4cb994da6fca6fec05f316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 'Finally you don''t feel like going to work. It does not look like
+    you, but you call in sick. '
+  cards:
+  - {fileID: 11400000, guid: 9e5db191b0085334a9470ed7a87cf487, type: 2}
+  nodes:
+  - {fileID: 1123416556}
+--- !u!114 &565584373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7519f1ac45e1a1f49b5a85b695b6ca73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!114 &565584374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565584367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1fdbd22a3a2d42b4816d4f161e459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkSuccess: 0
 --- !u!1 &567892211
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,69 +3308,6 @@ Transform:
   m_Father: {fileID: 279644909}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &616523078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 616523079}
-  - component: {fileID: 616523081}
-  - component: {fileID: 616523080}
-  m_Layer: 0
-  m_Name: Motivation Slot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &616523079
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616523078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1626056801}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616523080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616523078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acb4f887541739c4d80f91b3c10b0b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: 9e5db191b0085334a9470ed7a87cf487, type: 2}
-  - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
-  - {fileID: 11400000, guid: 57bda18c161cf204e985922a8d89aa2c, type: 2}
---- !u!114 &616523081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616523078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6803af603ab0f0429fa568fc112a944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: Get rid of stress, boredom or loneliness. Not necessary.
-  required: 0
-  conditionMergeMode: 0
 --- !u!1 &619803290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3902,7 +3983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1626056801}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &816858864
 MonoBehaviour:
@@ -3933,68 +4014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: Get rid of stress, boredom or loneliness. Not necessary.
-  required: 0
-  conditionMergeMode: 0
---- !u!1 &833620396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 833620397}
-  - component: {fileID: 833620399}
-  - component: {fileID: 833620398}
-  m_Layer: 0
-  m_Name: Stress slot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &833620397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833620396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1743471179}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &833620398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833620396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acb4f887541739c4d80f91b3c10b0b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
-  - {fileID: 11400000, guid: 93cf28806b9189646841209d281976ac, type: 2}
---- !u!114 &833620399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833620396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6803af603ab0f0429fa568fc112a944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: Get rid of Exhaustion or Stress
   required: 0
   conditionMergeMode: 0
 --- !u!1 &854757196
@@ -4046,6 +4065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &854757199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4219,6 +4239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &905812194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4342,6 +4363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &907030154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4529,6 +4551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &935487128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4771,6 +4794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &991034995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4968,7 +4992,6 @@ GameObject:
   - component: {fileID: 1007214075}
   - component: {fileID: 1007214078}
   - component: {fileID: 1007214077}
-  - component: {fileID: 1007214076}
   m_Layer: 0
   m_Name: Failure
   m_TagString: Untagged
@@ -4988,7 +5011,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 430240837}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1007214073
 MonoBehaviour:
@@ -5033,19 +5056,6 @@ MonoBehaviour:
   cards:
   - {fileID: 11400000, guid: 9e5db191b0085334a9470ed7a87cf487, type: 2}
   nodes: []
---- !u!114 &1007214076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007214071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7519f1ac45e1a1f49b5a85b695b6ca73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
 --- !u!114 &1007214077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5079,7 +5089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 1982306690}
-  toAdd: 1
+  toAdd: 2
 --- !u!1 &1022359594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,6 +5571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1115436021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5621,6 +5632,55 @@ MonoBehaviour:
   value: 3
   targets:
   - {fileID: 2056454501}
+--- !u!1 &1123416554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123416555}
+  - component: {fileID: 1123416556}
+  m_Layer: 0
+  m_Name: Fired at home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123416555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123416554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1170083291}
+  - {fileID: 230684874}
+  m_Father: {fileID: 492221572}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123416556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123416554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db7fd46b0c40846ae708867f3d8450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: You receive a call. It's your manager. He tells you that everyone
+    noticed your absence and your behaviours these days, and that they can't keep
+    me at the company. You are fired.
+  duration: 0
 --- !u!1 &1151991912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,7 +5730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 673296554}
-  toAdd: 0
+  toAdd: 1
 --- !u!114 &1151991915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5684,7 +5744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 673296554}
-  expectedValue: 1
+  expectedValue: 0
+  comparison: 0
 --- !u!114 &1151991916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5746,6 +5807,36 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2eacdb286604b8b46829d155b529658c, type: 2}
   nodes:
   - {fileID: 1447316247}
+--- !u!1 &1170083290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170083291}
+  m_Layer: 0
+  m_Name: Slots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170083291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170083290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1123416555}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195580148
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,7 +5847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195580149}
   m_Layer: 0
-  m_Name: At Home
+  m_Name: Home Tasks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5778,7 +5869,7 @@ Transform:
   - {fileID: 350720582}
   - {fileID: 567892212}
   m_Father: {fileID: 492221572}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202656582
 GameObject:
@@ -6384,6 +6475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1300255869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6613,6 +6705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1336296995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6919,6 +7012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1408106227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7373,6 +7467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1483347310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7712,6 +7807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1573641782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7958,7 +8054,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 616523079}
   - {fileID: 816858863}
   m_Father: {fileID: 567892212}
   m_RootOrder: 0
@@ -8090,6 +8185,85 @@ MonoBehaviour:
   description: Your boss gives you an urgent task while you are in the middle of
     something else. You must do it right away.
   duration: 0
+--- !u!1 &1655761843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655761844}
+  - component: {fileID: 1655761847}
+  - component: {fileID: 1655761846}
+  - component: {fileID: 1655761845}
+  m_Layer: 0
+  m_Name: Receive reward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655761844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655761843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 230684874}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655761845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655761843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7519f1ac45e1a1f49b5a85b695b6ca73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!114 &1655761846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655761843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a454cfe12d4cb994da6fca6fec05f316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Well what will you do now ? You can only hope things will get better
+    later...
+  cards:
+  - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
+  - {fileID: 11400000, guid: 57bda18c161cf204e985922a8d89aa2c, type: 2}
+  - {fileID: 11400000, guid: 4270b5a7c476cc847a0b5a765d815e41, type: 2}
+  nodes:
+  - {fileID: 160639921}
+--- !u!114 &1655761847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655761843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1fdbd22a3a2d42b4816d4f161e459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkSuccess: 1
 --- !u!1 &1659451640
 GameObject:
   m_ObjectHideFlags: 0
@@ -8164,7 +8338,7 @@ GameObject:
   - component: {fileID: 1661989918}
   - component: {fileID: 1661989920}
   m_Layer: 0
-  m_Name: Use Motivation => go early
+  m_Name: Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8416,6 +8590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1689323072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8647,7 +8822,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1681119705}
-  - {fileID: 833620397}
   m_Father: {fileID: 211005660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8682,7 +8856,7 @@ Transform:
   - {fileID: 1004967803}
   - {fileID: 1965309691}
   m_Father: {fileID: 492221572}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1752016866
 MonoBehaviour:
@@ -8851,7 +9025,7 @@ GameObject:
   - component: {fileID: 1763435805}
   - component: {fileID: 1763435809}
   m_Layer: 0
-  m_Name: Use Motivation => go early + finish work
+  m_Name: Success + Last task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8885,6 +9059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1763435806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9178,6 +9353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1852805041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9502,6 +9678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1231152104}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &1958104809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10346,6 +10523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variable: {fileID: 1530127008}
   expectedValue: 0
+  comparison: 0
 --- !u!114 &2121774931
 MonoBehaviour:
   m_ObjectHideFlags: 0
