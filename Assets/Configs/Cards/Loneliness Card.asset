@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Loneliness
   description: An office work that you don't really love, but it does not pay bad.
     Don't be late, or you will have problems with your hierarchy.
-  icon: {fileID: 21300000, guid: 95e87ccd3bbae37438d43adff90a9389, type: 3}
+  icon: {fileID: 21300000, guid: a80d52caf989f954897ee41ee68ea986, type: 3}
   category: {fileID: 11400000, guid: 90caf8f847c2f2540a96b0f53b8eafaa, type: 2}
   duration: 80
   depletionCard: {fileID: 11400000, guid: 2eacdb286604b8b46829d155b529658c, type: 2}
