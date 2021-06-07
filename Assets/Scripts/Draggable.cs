@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Runtime.InteropServices;
+using UnityEngine.InputSystem;
 
 public enum DragReleaseState
 {
@@ -19,6 +21,7 @@ public struct DragReleaseResult
 
 public class Draggable : EventTrigger
 {
+
     private RectTransform rectTransform;
     public static System.Action<Draggable> dragStartDelegate;
 
@@ -32,6 +35,11 @@ public class Draggable : EventTrigger
     private Slot dragStartAttachedSlot;
     public Transform defaultParent;
 
+    public Vector3 force;
+    public float weight = 1;
+
+    private Vector2 releaseMousePos;
+    private bool dragged = false;
 
     private void Start()
     {
@@ -40,11 +48,27 @@ public class Draggable : EventTrigger
             defaultParent = transform.parent;
     }
 
+    private void FixedUpdate()
+    {
+    }
+
+    private void Update()
+    {
+        transform.position += force * Time.deltaTime;
+        if(dragged)
+        {
+            Vector2 delta = Mouse.current.delta.ReadValue() * weight;
+            rectTransform.position += new Vector3(delta.x, delta.y, 0);
+            releaseMousePos += delta;
+        }
+    }
+
     public override void OnDrag(PointerEventData data)
     {
         Vector3 targetPos = data.pointerCurrentRaycast.worldPosition;
         targetPos.z = 0;
-        rectTransform.position += new Vector3(data.delta.x, data.delta.y, 0);
+        
+        
     }
 
     public override void OnPointerDown(PointerEventData eventData)
@@ -56,17 +80,26 @@ public class Draggable : EventTrigger
 
     public override void OnBeginDrag(PointerEventData data)
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         dragStartPos = transform.position;
+        releaseMousePos = Mouse.current.position.ReadValue();
         dragStartParent = transform.parent;
         transform.SetParent(GameState.instance.draggedObjectParent, true);
         transform.SetAsLastSibling();
         dragStartDelegate?.Invoke(this);
         GameState.instance.backgroundClicked?.Invoke();
         dragChangeDelegate?.Invoke(true);
+        dragged = true;
     }
 
     public override void OnEndDrag(PointerEventData data)
     {
+        dragged = false;
+        //SetCursorPos((int)releaseMousePos.x, (int)releaseMousePos.y);
+        Cursor.lockState = CursorLockMode.None;
+        Mouse.current.WarpCursorPosition(releaseMousePos);
+        Cursor.visible = true;
         base.OnEndDrag(data);
         dragChangeDelegate?.Invoke(false);
         

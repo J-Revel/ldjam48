@@ -11,8 +11,9 @@ public class AnimOnTimerEnd : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();    
-        timer.timerEndDelegate += OnTimerEnd;
+        animator = GetComponent<Animator>();
+        if(timer != null)
+            timer.timerEndDelegate += OnTimerEnd;
     }
 
     void OnTimerEnd()
