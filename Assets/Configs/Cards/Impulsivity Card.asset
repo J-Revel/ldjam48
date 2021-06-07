@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Impulsivity
   description: There are things you can't stand anymore. Sometimes, you just can't
     control yourself.
-  icon: {fileID: 21300000, guid: f21dc8685252f284c9f90514e57d9890, type: 3}
+  icon: {fileID: 21300000, guid: 32309335c3b2be74baa77dce119c07c2, type: 3}
   category: {fileID: 11400000, guid: 90caf8f847c2f2540a96b0f53b8eafaa, type: 2}
   duration: 150
   depletionCard: {fileID: 11400000, guid: 2eacdb286604b8b46829d155b529658c, type: 2}
