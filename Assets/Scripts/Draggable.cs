@@ -80,7 +80,7 @@ public class Draggable : EventTrigger
 
     public override void OnBeginDrag(PointerEventData data)
     {
-        Cursor.visible = false;
+        // Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         dragStartPos = transform.position;
         releaseMousePos = Mouse.current.position.ReadValue();
@@ -99,7 +99,7 @@ public class Draggable : EventTrigger
         //SetCursorPos((int)releaseMousePos.x, (int)releaseMousePos.y);
         Cursor.lockState = CursorLockMode.None;
         Mouse.current.WarpCursorPosition(releaseMousePos);
-        Cursor.visible = true;
+        // Cursor.visible = true;
         base.OnEndDrag(data);
         dragChangeDelegate?.Invoke(false);
         
