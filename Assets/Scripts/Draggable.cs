@@ -21,7 +21,6 @@ public struct DragReleaseResult
 
 public class Draggable : EventTrigger
 {
-
     private RectTransform rectTransform;
     public static System.Action<Draggable> dragStartDelegate;
 
@@ -81,7 +80,6 @@ public class Draggable : EventTrigger
     public override void OnBeginDrag(PointerEventData data)
     {
         // Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         dragStartPos = transform.position;
         releaseMousePos = Mouse.current.position.ReadValue();
         dragStartParent = transform.parent;
