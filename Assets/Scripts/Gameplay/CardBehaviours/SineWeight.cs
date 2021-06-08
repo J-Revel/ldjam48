@@ -16,6 +16,6 @@ public class SineWeight : MonoBehaviour
 
     void Update()
     {
-        draggable.weight = (1 + Mathf.Sin(Time.time * Mathf.PI / freq)) / 2 * ( maxWeight - minWeight) + minWeight;
+        draggable.dragSpeed = (1 + Mathf.Sin(Time.time * Mathf.PI / freq)) / 2 * ( maxWeight - minWeight) + minWeight;
     }
 }

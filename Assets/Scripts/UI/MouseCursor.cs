@@ -5,12 +5,16 @@ using UnityEngine.InputSystem;
 
 public class MouseCursor : MonoBehaviour
 {
+
+    public static MouseCursor instance;
     private Vector2 lastMousePos;
+    public float speedScale = 1;
     private bool initialized = false;
     private bool warped = false;
     private bool cursorHidden = false;
     void Start()
     {
+        instance = this;
         lastMousePos = Mouse.current.position.ReadValue();
         Cursor.visible = false;
         cursorHidden = true;
@@ -27,9 +31,8 @@ public class MouseCursor : MonoBehaviour
         if(!warped)
         {
             Vector2 delta = newPos - lastMousePos;
-            transform.position += new Vector3(delta.x, delta.y, 0);
+            transform.position += new Vector3(delta.x, delta.y, 0) * speedScale;
             lastMousePos = newPos;
-            
         }
         Vector2 screenCenter = new Vector2(Screen.width, Screen.height) / 2;
         float distanceToCenter = (newPos - screenCenter).magnitude;

@@ -39,6 +39,7 @@ public class Draggable : EventTrigger
 
     private Vector2 releaseMousePos;
     private bool dragged = false;
+    public float dragSpeed = 1;
 
     private void Start()
     {
@@ -56,9 +57,7 @@ public class Draggable : EventTrigger
         transform.position += force * Time.deltaTime;
         if(dragged)
         {
-            Vector2 delta = Mouse.current.delta.ReadValue() * weight;
-            rectTransform.position += new Vector3(delta.x, delta.y, 0);
-            releaseMousePos += delta;
+            
         }
     }
 
@@ -67,7 +66,8 @@ public class Draggable : EventTrigger
         Vector3 targetPos = data.pointerCurrentRaycast.worldPosition;
         targetPos.z = 0;
         
-        
+        rectTransform.position += new Vector3(data.delta.x, data.delta.y, 0);
+        releaseMousePos += data.delta;
     }
 
     public override void OnPointerDown(PointerEventData eventData)
@@ -89,6 +89,7 @@ public class Draggable : EventTrigger
         GameState.instance.backgroundClicked?.Invoke();
         dragChangeDelegate?.Invoke(true);
         dragged = true;
+        MouseCursor.instance.speedScale = dragSpeed;
     }
 
     public override void OnEndDrag(PointerEventData data)
@@ -96,10 +97,11 @@ public class Draggable : EventTrigger
         dragged = false;
         //SetCursorPos((int)releaseMousePos.x, (int)releaseMousePos.y);
         Cursor.lockState = CursorLockMode.None;
-        Mouse.current.WarpCursorPosition(releaseMousePos);
+        //Mouse.current.WarpCursorPosition(releaseMousePos);
         // Cursor.visible = true;
         base.OnEndDrag(data);
         dragChangeDelegate?.Invoke(false);
+        MouseCursor.instance.speedScale = 1;
         
         if(dragReleaseDelegate != null)
         {
