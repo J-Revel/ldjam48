@@ -11,8 +11,6 @@ public class GameState : MonoBehaviour
     public System.Action backgroundClicked;
 
     public CardElement cardPrefab;
-    public ActionPopup actionPopupPrefab;
-    public GiftPopup giftPopupPrefab;
     public ActionPopupSpawner actionCardPack;
     public GiftPopupSpawner giftCardPack;
     public Transform darkProjectilePrefab;

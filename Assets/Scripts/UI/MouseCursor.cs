@@ -27,7 +27,7 @@ public class MouseCursor : MonoBehaviour
         if(!warped)
         {
             Vector2 delta = newPos - lastMousePos;
-            transform.position += new Vector3(delta.x, delta.y, 0);
+            transform.position += new Vector3(delta.x, delta.y, 0) / 100;
             lastMousePos = newPos;
             
         }
@@ -38,9 +38,9 @@ public class MouseCursor : MonoBehaviour
             if(Cursor.visible)
             {
                 cursorHidden = false;
-                Debug.Log("HIDDEN");
-                Mouse.current.WarpCursorPosition(transform.position);
-                lastMousePos = transform.position;
+                Debug.Log("HIDDEN " + transform.position);
+                Mouse.current.WarpCursorPosition(new Vector3(screenCenter.x, screenCenter.y, 0) + transform.position * 100);
+                lastMousePos = new Vector3(screenCenter.x, screenCenter.y, 0) + transform.position * 100;
                 warped = true;
             }
             if(distanceToCenter > Mathf.Min(Screen.width, Screen.height) / 4)

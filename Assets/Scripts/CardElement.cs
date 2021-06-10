@@ -6,7 +6,7 @@ public class CardElement : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Draggable>().defaultParent = GameState.instance.cardContainer;
+        // GetComponent<Draggable>().defaultParent = GameState.instance.cardContainer;
     }
 
     

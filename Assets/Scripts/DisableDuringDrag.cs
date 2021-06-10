@@ -10,7 +10,7 @@ public class DisableDuringDrag : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
-        GetComponentInParent<Draggable>().dragChangeDelegate += OnDragChange;
+        // GetComponentInParent<Draggable>().dragChangeDelegate += OnDragChange;
     }
 
     void OnDragChange(bool dragging)
