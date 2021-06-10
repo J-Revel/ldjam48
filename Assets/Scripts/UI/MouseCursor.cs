@@ -12,6 +12,23 @@ public class MouseCursor : MonoBehaviour
     private bool initialized = false;
     private bool warped = false;
     private bool cursorHidden = false;
+
+    void OnApplicationFocus()
+    {
+        Cursor.visible = false;
+        Vector2 screenCenter = new Vector2(Screen.width, Screen.height) / 2;
+        transform.position = Vector2.zero;
+        cursorHidden = true;
+    }
+    
+    void OnApplicationPause()
+    {
+        Cursor.visible = true;
+        Vector2 screenCenter = new Vector2(Screen.width, Screen.height) / 2;
+        transform.position = Vector2.zero;
+        cursorHidden = false;
+    }
+
     void Start()
     {
         instance = this;
@@ -53,9 +70,7 @@ public class MouseCursor : MonoBehaviour
                     Mouse.current.WarpCursorPosition(screenCenter);
                     lastMousePos = screenCenter;
                     warped = true;
-        
                 }
-                
             }
             else
             {
